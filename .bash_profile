@@ -2,7 +2,7 @@
 
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
-        . ~/.bashrc
+	. ~/.bashrc
 fi
 
 # User specific environment and startup programs
@@ -20,3 +20,6 @@ export HISTTIMEFORMAT='%F %T '
 
 alias grep="grep --color"
 
+# Set the $TERM to xterm-256color for tmux to support 256 colour
+export TERM='xterm-256color'
+alias tmux="tmux -2"

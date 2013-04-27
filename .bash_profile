@@ -9,8 +9,11 @@ fi
 
 PATH=$PATH:$HOME/bin:/opt/local/bin/
 
+function parse_git_branch {
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
 
-PS1='\[\e[0;31m\]\# \[\e[m\]\[\e[0;32m\]\u\[\e[m\]\[\e[0;33m\]@\[\e[m\]\[\e[0;36m\]\h\[\e[m\]\[\e[0;33m\]@\[\e[m\]\[\e[1;31m\]\t\[\e[m:\e[0;36m\]\w\[\e[m\]\n=> '
+PS1='\[\e[0;31m\]\# \[\e[m\]\[\e[0;32m\]\u\[\e[m\]\[\e[0;33m\]@\[\e[m\]\[\e[0;36m\]\h\[\e[m\]\[\e[0;33m\]@\[\e[m\]\[\e[1;31m\]\t\[\e[m:\e[0;36m\]\w\[\e[m\]\[\033[0;35m\] $(parse_git_branch)\[\e[m\]\n=> '
 export PATH PS1
 
 shopt -s cdspell

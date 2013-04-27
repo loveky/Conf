@@ -34,7 +34,7 @@ alias bash="bash --init-file ~/.bash_profile"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 
-// add alias for Cygwin
+# add alias for Cygwin
 if uname | grep -i 'cygwin_nt' >> /dev/null
 then
    alias clear='printf "\x1b\x5b\x48\x1b\x5b\x32\x4a"'

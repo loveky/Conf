@@ -32,4 +32,10 @@ source /sw/bin/init.sh
 alias bash="bash --init-file ~/.bash_profile"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-rvm gemset use rails3.2.3 >> /dev/null
+
+
+// add alias for Cygwin
+if uname | grep -i 'cygwin_nt' >> /dev/null
+then
+   alias clear='printf "\x1b\x5b\x48\x1b\x5b\x32\x4a"'
+fi

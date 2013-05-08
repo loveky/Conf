@@ -15,6 +15,3 @@ set ignorecase smartcase
 
 map <Up> gk
 map <Down> gj
-autocmd BufNewFile,BufRead *.cgi set filetype=perl
-
-autocmd FileType perl colo graywh

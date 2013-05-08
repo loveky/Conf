@@ -1,0 +1,8 @@
+[color]
+    branch   = true
+    diff     = true
+    grep     = true
+    decorate = true
+    pager    = true
+    showbranch =  true
+    status   = true
